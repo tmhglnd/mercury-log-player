@@ -1,6 +1,6 @@
 # 🌕 Mercury Log Player
 
-**Welcome to Mercury! ✌️ ☮️ Make Music, Not War! ☮️ ✌️ **
+**Welcome to Mercury! ✌️ ☮️ Make Music, Not War!** ☮️ ✌️
 
 This is a package for the *Mercury Live Coding Environment*. With this package you can play back log files that were saved during a live coding performance with the Mercury4Max version. To save these log files make sure you enable `Auto Log Code` in the Mercury Window. Afterwards you can move the files you wanna replay to a folder, then load that folder in this script and the code will be played back.
 
