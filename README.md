@@ -32,11 +32,11 @@ Install the node modules
 
 ## Usage
 
-Create a folder with Mercury Log Files you like to replay. The files should be in the form of: `sketch_yyyy.mm.dd_hh.mm.ss.txt`, for example `sketch_2024.11.24_00.13.20.txt`.
+Create a folder with Mercury Log Files you like to replay. The code looks at the `date created` info in the file and based on that determines when the next file should be executed. In general a Mercury log file also includes the the time in the filename, for example: `sketch_2024.11.24_00.13.20.txt`.
 
 In the repository run:
 
-`$ node log-player.js --folder <path>`
+`$ node log-player.js --folder ~/Path/To/Files`
 
 This will start the playback, sending code as OSC-message to port `4880` with address `/mercury-code`. Make sure you have Mercury4Max running to hear the playback.
 
