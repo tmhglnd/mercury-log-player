@@ -16,9 +16,7 @@ This is a package for the *Mercury Live Coding Environment*. With this package y
 
 [**👾 Or start sketching in the browser:**](https://mercury.timohoogland.com)
 
-[**💬 Join the Discord Community!**](https://discord.gg/vt59NYU)
-
-# 🚀 How to use this log player
+# 🚀 How to use this Log Player
 
 ## Install
 
