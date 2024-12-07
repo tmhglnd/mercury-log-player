@@ -59,8 +59,6 @@ function play(files, rate) {
 	// if undefined playback is done and exit
 	if (current === undefined) {
 		console.log('playback done!');
-		osc.close();
-		process.exit();
 		return;
 	}
 	// get the waiting time for next playback, based on rate

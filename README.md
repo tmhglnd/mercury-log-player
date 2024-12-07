@@ -2,7 +2,7 @@
 
 **Welcome to Mercury! ✌️ ☮️ Make Music, Not War!** ☮️ ✌️
 
-This is a package for the *Mercury Live Coding Environment*. With this package you can play back log files that were saved during a live coding performance with the Mercury4Max version. To save these log files make sure you enable `Auto Log Code` in the Mercury Window. Afterwards you can move the files you wanna replay to a folder, then load that folder in this script and the code will be played back.
+This is a package for the *Mercury Live Coding Environment*. With this package you can play back log files that were saved during a live coding performance with the Mercury4Max version. To save these log files make sure you enable `Auto Log Sketch` in the Mercury Window. Afterwards you can move the files you wanna replay to a folder, then load that folder in this script and the code will be played back.
 
 [![](https://img.shields.io/static/v1?label=Join%20the%20Discord&message=%E2%9D%A4&logo=Discord)](https://discord.gg/vt59NYU)
 [![](https://img.shields.io/static/v1?label=Support%20on%20Ko-Fi&message=%E2%9D%A4&logo=Kofi)](https://ko-fi.com/I2I3SV7FX)
@@ -32,7 +32,7 @@ Install the node modules
 
 ## Usage
 
-Create a folder with Mercury Log Files you like to replay. The code looks at the `date created` info in the file and based on that determines when the next file should be executed. In general a Mercury log file also includes the the time in the filename, for example: `sketch_2024.11.24_00.13.20.txt`.
+Create a folder with Mercury Log Files you like to replay. If you don't have any log files, you can create them by turning on `Auto Log Sketch` in the Mercury window, and start performing. The player looks at the `date created` info in all the files and based on that determines when the next file should be executed. In general a Mercury log file also includes the the time in the filename, for example: `sketch_2024.11.24_00.13.20.txt`.
 
 In the repository run:
 
