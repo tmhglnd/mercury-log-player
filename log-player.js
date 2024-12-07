@@ -28,14 +28,12 @@ const options = program.opts();
 // initialize osc client to send code to server
 const osc = new Client('localhost', 4880);
 
-let playbackrate = 1;
-
 if (process.argv.length < 3) {
 	console.error('please provide options for folder and rate with -f and -r, more info with --help');
 } else {
 	
 	// set the playbackrate (1 = same as performance, 2 = 2x faster)
-	playbackrate = options.rate ? options.rate : 1;
+	let playbackrate = options.rate ? options.rate : 1;
 	
 	console.log('--folder:', options.folder);
 	console.log('--rate:', playbackrate);
@@ -51,10 +49,10 @@ if (process.argv.length < 3) {
 
 	console.log(`starting playback... quit by hitting: Ctrl + C`);
 
-	play(playfiles);
+	play(playfiles, playbackrate);
 }
 
-function play(files) {
+function play(files, rate) {
 	// get the first file of the list and remove
 	let current = files.shift();
 
@@ -66,14 +64,14 @@ function play(files) {
 		return;
 	}
 	// get the waiting time for next playback, based on rate
-	let time = current.wait / playbackrate;
+	let time = current.wait / rate;
 	console.log(`files left: ${files.length}, next in ${time}ms`);
 
 	// send code over OSC-message for evaluating
 	osc.send('/mercury-code', current.code);
 
 	// set timeout for next playback
-	setTimeout(() => { play(files) }, time);
+	setTimeout(() => { play(files, rate) }, time);
 }
 
 function getFiles(path) {
@@ -120,7 +118,7 @@ function processFiles(logs) {
 
 	// print the total runtime in min:sec:ms
 	console.log(`total performance time: ${ms2time(_total)}`);
-	console.log(`runtime with playbackrate: ${ms2time(_total / playbackrate)}\n`);
+	console.log(`runtime with playbackrate: ${ms2time(_total / options.rate)}\n`);
 	console.log();
 
 	return playfiles;
