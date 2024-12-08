@@ -33,10 +33,10 @@ if (process.argv.length < 3) {
 } else {
 	
 	// set the playbackrate (1 = same as performance, 2 = 2x faster)
-	let playbackrate = options.rate ? options.rate : 1;
+	options.rate = options.rate ? options.rate : 1;
 	
 	console.log('--folder:', options.folder);
-	console.log('--rate:', playbackrate);
+	console.log('--rate:', options.rate);
 	
 	if (!options.folder){
 		console.error('please provide a folder path with option -f');
@@ -49,7 +49,7 @@ if (process.argv.length < 3) {
 
 	console.log(`starting playback... quit by hitting: Ctrl + C`);
 
-	play(playfiles, playbackrate);
+	play(playfiles, options.rate);
 }
 
 function play(files, rate) {
